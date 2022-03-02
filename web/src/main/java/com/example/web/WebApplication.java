@@ -1,6 +1,5 @@
 package com.example.web;
 
-//import ch.qos.logback.classic.Logger;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -14,13 +13,14 @@ import java.util.ArrayList;
 @RestController
 public class WebApplication {
 
-//    private final Logger logger = LoggerFactory.getLogger(WebApplication.class);
+    private final Logger logger = LoggerFactory.getLogger(WebApplication.class);
 
     public static void main(String[] args) {
         SpringApplication.run(WebApplication.class, args);
         ArrayList<String> strings = new ArrayList<>();
         strings.add("1");
         strings.add("2");
+        System.out.println(strings);
     }
 
     @GetMapping("/hello")
